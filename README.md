@@ -57,7 +57,7 @@ The `op` and `ip` labels refer to the component's **local** `n1` and `n2` direct
 
 Explicit web/flange or directional scales override their legacy fallback inputs. Negative scales reverse the corresponding imperfection direction. With `couple_local=True`, the web and flange amplitudes are adjusted together according to the original relationship; opposite nonzero signs require `couple_local=False`.
 
-The `web_identification_mode` option controls how web nodes are identified. The default `shell` mode (formerly used in the original version) checks only whether the local x-coordinate is approximately zero, whereas the `shell` mode uses the web thickness and clear web depth. This option controls node identification and does not select or detect the continuum element type. It is a geometric classification rule for an I-section, not a general classifier for arbitrary cross-sections or fillet geometries.
+The `web_identification_mode` option controls how web nodes are identified. The default `shell` mode (formerly used in the original version) checks only whether the local x-coordinate is approximately zero, whereas the `solid` mode uses the web thickness and clear web depth. This option controls node identification and does not select or detect the continuum element type. It is a geometric classification rule for an I-section, not a general classifier for arbitrary cross-sections or fillet geometries.
 
 Half-model generation assumes that the model extends from a physical member end at `z=0` to the full member's midspan. It does not create symmetry boundary conditions. The reference amplitudes above are implementation conventions; select scales and boundary conditions appropriate to the analysis.
 
